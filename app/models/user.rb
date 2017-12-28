@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: %i(google)
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: %i(google facebook twitter)
   def self.create_unique_string
     SecureRandom.uuid
   end
